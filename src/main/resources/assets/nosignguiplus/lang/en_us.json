@@ -1,0 +1,13 @@
+{
+  "config.nosignguiplus.title": "NoSignGUI+ Settings",
+  "config.nosignguiplus.category.general": "General Settings",
+  "config.nosignguiplus.option.disable_sign_gui.name": "Disable sign GUI",
+  "config.nosignguiplus.option.disable_sign_gui.description": "Prevents the editing screen from opening when placing or interacting with signs.",
+  "config.nosignguiplus.option.go_to_key_binds.name": "Set up a hotkey",
+  "config.nosignguiplus.option.go_to_key_binds.description": "Opens the key binds menu.",
+  "config.nosignguiplus.option.go_to_key_binds.text": "Key Binds...",
+  "key.category.minecraft.nosignguiplus": "NoSignGUI+",
+  "key.nosignguiplus.toggle": "Toggle sign GUI",
+  "message.nosignguiplus.sign_gui_disabled": "Disabled sign GUI",
+  "message.nosignguiplus.sign_gui_enabled": "Enabled sign GUI"
+}

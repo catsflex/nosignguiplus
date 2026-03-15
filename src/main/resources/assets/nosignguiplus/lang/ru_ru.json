@@ -1,0 +1,13 @@
+{
+  "config.nosignguiplus.title": "Настройки NoSignGUI+",
+  "config.nosignguiplus.category.general": "Основные настройки",
+  "config.nosignguiplus.option.disable_sign_gui.name": "Отключить интерфейс табличек",
+  "config.nosignguiplus.option.disable_sign_gui.description": "Скрывает окно редактирования при установке или взаимодействии с табличкой.",
+  "config.nosignguiplus.option.go_to_key_binds.name": "Настроить горячую клавишу",
+  "config.nosignguiplus.option.go_to_key_binds.description": "Открывает меню назначения клавиш.",
+  "config.nosignguiplus.option.go_to_key_binds.text": "Назначение клавиш...",
+  "key.category.minecraft.nosignguiplus": "NoSignGUI+",
+  "key.nosignguiplus.toggle": "Переключить интерфейс табличек",
+  "message.nosignguiplus.sign_gui_disabled": "Интерфейс табличек включён",
+  "message.nosignguiplus.sign_gui_enabled": "Интерфейс табличек отключён"
+}
