@@ -7,16 +7,17 @@ import org.slf4j.Logger;
 
 public class Helper {
 	
+	public static final String MOD_ID = "nosignguiplus";
+	
 	private static final ModContainer MOD = FabricLoader
 		.getInstance()
-		.getModContainer("nosignguiplus")
+		.getModContainer(MOD_ID)
 		.orElseThrow();
 	
-	public static final String MOD_ID = MOD.getMetadata().getId();
 	public static final String MOD_NAME = MOD.getMetadata().getName();
 	public static final String MOD_PREFIX = String.format("[%s]", MOD_NAME);
 	
 	public static final Logger LOGGER = LogUtils.getLogger();
-	public static final String CONFIG_NAME = "nosignguiplus.json";
+	public static final String CONFIG_NAME = MOD_ID + ".json";
 	public static final String YACL_MOD_ID = "yet_another_config_lib_v3";
 }

@@ -9,7 +9,7 @@ import net.minecraft.network.chat.Component;
 
 public class YACLIntegration {
 	public static Screen createScreen(Screen parent) {
-		var config = NoSignGUIPlusConfig.getInstance();
+		var config = ModConfiguration.getInstance();
 		
 		return YetAnotherConfigLib.createBuilder()
 			.title(Component.translatable("config.nosignguiplus.title"))
@@ -21,7 +21,7 @@ public class YACLIntegration {
 				.option(Option.<Boolean>createBuilder()
 					.name(Component.translatable("config.nosignguiplus.option.disable_sign_gui.name"))
 					.description(OptionDescription.of(Component.translatable("config.nosignguiplus.option.disable_sign_gui.description")))
-					.binding(NoSignGUIPlusConfig.DEF_IS_SIGN_GUI_DISABLED, () -> config.isSignGUIDisabled, v -> config.isSignGUIDisabled = v)
+					.binding(ModConfiguration.DEF_IS_SIGN_GUI_DISABLED, () -> config.isSignGUIDisabled, v -> config.isSignGUIDisabled = v)
 					.controller(TickBoxControllerBuilder::create)
 					.build())
 				

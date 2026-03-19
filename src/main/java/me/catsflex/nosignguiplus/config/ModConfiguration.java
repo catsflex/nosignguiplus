@@ -8,33 +8,31 @@ import net.fabricmc.loader.api.FabricLoader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class NoSignGUIPlusConfig {
+public class ModConfiguration {
 	
 	// Default values
 	public static final boolean DEF_IS_SIGN_GUI_DISABLED = false;
-	public static final boolean DEF_IS_DEBUG_MODE = false;
 	
 	// Current values
 	public boolean isSignGUIDisabled = DEF_IS_SIGN_GUI_DISABLED;
-	public boolean isDebugMode = DEF_IS_DEBUG_MODE;
 	
 	// Config saving stuff
 	private static final Gson _GSON = new GsonBuilder().setPrettyPrinting().create();
 	private static final Path _CONFIG_PATH = FabricLoader.getInstance().getConfigDir().resolve(Helper.CONFIG_NAME);
 	
-	private static NoSignGUIPlusConfig _instance;
+	private static ModConfiguration _instance;
 	
-	public static NoSignGUIPlusConfig getInstance() {
+	public static ModConfiguration getInstance() {
 		if (_instance == null) {
 			_instance = load();
 		}
 		return _instance;
 	}
 	
-	public static NoSignGUIPlusConfig load() {
+	public static ModConfiguration load() {
 		if (Files.exists(_CONFIG_PATH)) {
 			try (var reader = Files.newBufferedReader(_CONFIG_PATH)) {
-				var loaded = _GSON.fromJson(reader, NoSignGUIPlusConfig.class);
+				var loaded = _GSON.fromJson(reader, ModConfiguration.class);
 				if (loaded != null) {
 					return loaded;
 				}
@@ -42,7 +40,7 @@ public class NoSignGUIPlusConfig {
 				Helper.LOGGER.warn("{} Failed to load config, using defaults!", Helper.MOD_PREFIX, e);
 			}
 		}
-		var config = new NoSignGUIPlusConfig();
+		var config = new ModConfiguration();
 		config.save();
 		return config;
 	}

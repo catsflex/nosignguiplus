@@ -1,7 +1,7 @@
 package me.catsflex.nosignguiplus;
 
 import com.mojang.blaze3d.platform.InputConstants;
-import me.catsflex.nosignguiplus.config.NoSignGUIPlusConfig;
+import me.catsflex.nosignguiplus.config.ModConfiguration;
 import me.catsflex.nosignguiplus.util.Helper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -33,7 +33,7 @@ public class NoSignGUIPlusClient implements ClientModInitializer {
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			if (toggleKey.consumeClick()) {
 				if (client.player == null) return;
-				var config = NoSignGUIPlusConfig.getInstance();
+				var config = ModConfiguration.getInstance();
 				
 				// Invert state & save
 				config.isSignGUIDisabled = !config.isSignGUIDisabled;
